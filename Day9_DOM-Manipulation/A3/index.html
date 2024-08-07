@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removing Elements</title>
+</head>
+<body>
+
+    <h2 id="removeIt">It will be removed by DOM</h2>
+
+    <ul id="list">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue </li> 
+    </ul>
+
+
+    <script>
+        let removed = document.getElementById('removeIt').remove()
+        // removed.remove() 
+
+
+        // Remove lastChild
+        let list = document.getElementById('list')
+        let lastC = list.children[list.children.length -1 ]
+        lastC.remove() // Blue is removed
+
+
+    </script>
+</body>
+</html>
