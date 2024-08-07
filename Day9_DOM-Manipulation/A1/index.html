@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body class="body">
+    <h1 id="greet">Hello World</h1>
+    <button onclick="change()">chenage</button>
+    
+</body>
+<script>
+    // Task1 : Select Html tag by id and change text
+
+    let getId = document.getElementById('greet')
+    let getBody = document.getElementsByClassName('body')[0]
+    function change(){
+        getId.innerText= "Welcome to Karachi!";
+
+            // Task 2: change bg color by class
+        getBody.style.backgroundColor= "black";
+        getBody.style.color="white";
+    }
+
+</script>
+<style>
+
+</style>
+</html>
