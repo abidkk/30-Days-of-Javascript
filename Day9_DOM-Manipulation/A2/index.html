@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create & Append</title>
+</head>
+<body>
+
+  <ul id="list">
+    <p><b><u>Subjects</u></b></p>
+    <li>Data Structures</li>
+  </ul>
+    
+</body>
+<script>
+  let liist = document.getElementById("list")
+  let newDiv = document.createElement("div");
+  newDiv.textContent="Hello, Abid Khokkhar"
+  document.body.appendChild(newDiv)
+
+  // Adding new list item
+  let newItem = document.createElement("li")
+  newItem.textContent="Physcis"
+  liist.appendChild(newItem)
+
+</script>
+</html>
