@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div>
+        <h1 id="head" onmouseover="changeBorder()">Hello Pakistan</h1>
+        <button onclick="changeText()" >change</button>
+    </div>
+    <script>
+        let siteHead = document.getElementById("head")
+
+        let changeText = () => {
+            siteHead.innerText = "Welcome to Karachi"
+        }
+
+        let changeBorder = () => {
+            siteHead.style.border="2px solid black"
+        }
+    </script>
+</body>
+</html>
