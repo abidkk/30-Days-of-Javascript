@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Attributes & Classes</title>
+    <style>
+        .logoText{
+            color: black;
+        }
+
+        .changeLogoText{
+            color: red;
+            font-size: 40px;
+        }
+
+        .desc{
+            color: white;
+            background-color: black;
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id="logo_image" src="./wordpress.png" alt="logo" width="200" height="200">
+        <button onclick="changeL()">change Logo</button>
+        <h2 class="logoText">This is Logo</h2>
+        <p class="desc">This is Logo Description</p>
+    </div>
+
+    <script>
+        let logo = document.getElementById("logo_image")
+        let LText = document.getElementsByClassName("logoText")[0]
+        let LDesc = document.getElementsByClassName("desc")[0]
+        
+
+        let changeL = () => {   
+            logo.src="./python2.png"
+            LText.classList.add("changeLogoText");
+            LDesc.classList.remove("desc")
+        }
+     
+    </script>
+</body>
+</html>
