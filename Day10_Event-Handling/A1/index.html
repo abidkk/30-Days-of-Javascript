@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+
+<body>
+
+    <div>
+        <p id="pera">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente laborum qui neque magnam
+            consequuntur
+            minus consectetur, cumque aperiam omnis ipsam quaerat, veritatis recusandae quidem? Officiis ea harum
+            dignissimos architecto enim!</p>
+
+        <button onclick="changePera()">change Peragraph</button>
+    </div>
+
+    <div ondblclick="logoV()" style="padding: 100px; background-color: azure; border: 3px solid black;" >
+        <button>Loogo</button>
+        <img id="logo" src="./wordpress.png" alt="logo" width="400" height="400" >
+    </div>
+
+
+    <script>
+
+        // Task 1
+        let pera = document.getElementById('pera')
+        let changePera = () => {
+            pera.innerText = "Yes, it is generally legal to embed YouTube videos on your website using the embed link or iframe provided by YouTube. YouTube's terms of service allow users to embed videos as long as they are not used for commercial purposes or in a manner that violates YouTube's guidelines and the content creator's rights. However, it's good practice to ensure that the video is shared publicly and to respect any additional restrictions or requests made by the video owner."
+        }
+
+        // Task 2 : add a double click event listner to an image that toggle its visiblity
+        let logo = document.getElementById("logo")
+        let logoV = () => {
+            if (logo.style.display == 'none') {
+                logo.style.display = 'block'
+            }
+            else {
+                logo.style.display = 'none'
+            }
+        }
+
+    </script>
+</body>
+
+</html>
