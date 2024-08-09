@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="backG" onmouseover="changeBg()" onmouseout="(resetBg())"><h1>SynapseSkills</h1></div>
+
+    <script>
+
+        // Task1: mouseover event to change background
+        // Task2: mouseout to reset backgroun
+        let bgDiv = document.getElementById('backG')
+
+        function changeBg(){
+            bgDiv.style.backgroundColor="orange"
+        }
+
+        function resetBg(){
+            bgDiv.style.background="white"
+        }
+
+
+    </script>
+</body>
+</html>
