@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+</head>
+<style>
+    input{
+        margin: 50px;
+        padding: 10px 20px ;
+        width: 400px;
+        font-size: 20px;
+
+    }
+</style>
+<body>
+
+    <form >
+        <input id="inp"  type="text" placeholder="write here" onkeydown="down()" onkeyup="upKey()">
+        <p id="pera"></p>
+    </form>
+    
+
+    <script>
+        // Task1: key down event
+        let inpValue = document.getElementById('inp')
+        let pera = document.getElementById('pera')
+        function down(){
+         console.log(inpValue.value);
+         
+        }
+
+        // Task 2: key up event
+
+        function upKey(){
+            pera.innerText =inpValue.value
+        }
+
+
+    </script>
+</body>
+</html>
