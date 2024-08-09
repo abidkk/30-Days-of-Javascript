@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<style>
+    li{
+        cursor: pointer;
+    }
+    p{
+        font-weight: 800;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Event Delegation</h1>
+
+        <ul id="courseList">
+            <li>Programming </li>
+            <li>Mathematics </li>
+            <li>Cloud Computing </li>
+            <li>Database Design </li>
+            <li>Project Management </li>
+        </ul>
+
+        <div style="padding: 20px;">
+            <p id="sel"></p>
+
+        </div>
+    </div>
+
+    <script>
+        // Task 1: add a click event listner to a list that logs the text content of the clicked list item using event delegation
+
+        let sel = document.getElementById("sel")
+        courseList.onclick = (e) => {
+            if (e.target.tagName === "LI") {
+                let selectedCourse = e.target.textContent;
+                console.log(selectedCourse);
+                sel.innerText = `${selectedCourse}`
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Event</title>
+    <style>
+        li {
+            font-size: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="parent">
+        <ul id="cities">
+            <li>Karachi</li>
+            <li>Lahore</li>
+            <li>Peshawer</li>
+            <li>Sukker</li>
+            <li>Mirpurkhas</li>
+        </ul>
+
+        <button id="btn">Add New</button>
+
+    </div>
+
+
+    <script>
+        // Task : Add an event listner to a parent element that listens for events from dynamically added child elements
+
+        let parent = document.getElementById('parent');
+
+        parent.addEventListener('click', (e) => {
+            if (e.target.tagName === "LI") {
+                alert(` ${e.target.textContent} is clicked`)
+
+            }
+        })
+
+        let button = parent.querySelector('#btn');
+        button.addEventListener('click', function () {
+            let newCity = document.createElement("li");
+            newCity.textContent = 'Quetta';
+            document.getElementById('cities').appendChild(newCity);
+        })
+    </script>
+
+</body>
+
+</html>
