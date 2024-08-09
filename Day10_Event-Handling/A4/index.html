@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+    <style>
+        input {
+            margin: 10px;
+            padding: 10px 20px;
+            width: 400px;
+            font-size: 20px;
+
+        }
+
+        button {
+            padding: 5px 20px;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="info">
+        <input type="text" placeholder="name" id="name" name="name"><br>
+        <input type="text" placeholder="email" id="email" name="email"> <br> <br>
+
+        <button type="submit">Sumit</button>
+
+    </form>
+
+
+    <script>
+        let getInfo = document.getElementById('info').onsubmit = function (e) {
+            e.preventDefault()
+
+            let formData = new FormData(this);
+
+            for (let [key, value] of formData.entries()) {
+                console.log(`${key}: ${value}`);
+            }
+
+            console.log(formData); // return FormData object
+            
+            for (const element of formData) {
+                console.log(element); // returns Array of each input field
+                console.log(element[0]); 
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

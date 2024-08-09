@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onChange</title>
+    <style>
+        select{
+            font-size: 30px;
+            margin: 20px;
+            padding: 10px 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <select name="" id="cities">
+        <option value="karachi" selected>Karachi</option>
+        <option value="hyderabad" >Hyderbad</option>
+        <option value="lahore">Lahore</option>
+        <option value="gilgit">Gilgit</option>
+    </select>
+
+    <div style="padding: 20px;">
+        <p id="pera" style="font-weight: bold; font-size: 30px;"></p>
+    </div>
+    
+
+    <script>
+        let city = document.getElementById('cities')
+        let pera = document.getElementById('pera')
+
+
+        // city.onchange = function(){
+        //     let selectedCity = this.value;
+        //     console.log(selectedCity);
+            
+        // }
+
+        city.onchange = ((e)=>{
+            let selectedCity = e.target.value;
+            pera.innerText = selectedCity;
+        })
+
+        // can not use this keyword in arrow function
+
+
+    </script>
+</body>
+</html>
